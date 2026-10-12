@@ -1,0 +1,72 @@
+/*
+ * LanguageCard.css
+ * Estilos exclusivos del componente LanguageCard.
+ *
+ * Tema 1.2 — Estilos a un Componente:
+ *   Cada componente importa su propio archivo CSS. Esto mantiene el código
+ *   organizado y evita conflictos de nombres cuando el proyecto crece.
+ */
+
+.card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s, box-shadow 0.2s;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  /* El borde superior usa el color del lenguaje (pasado como variable CSS) */
+  border-top: 5px solid var(--card-color, #ccc);
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+/* ── Encabezado de la tarjeta ─────────────────────────────────────── */
+.card__header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.card__emoji {
+  font-size: 2rem;
+  line-height: 1;
+}
+
+.card__title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #1a1a2e;
+}
+
+/* ── Badge de tipo ────────────────────────────────────────────────── */
+.card__badge {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  background-color: var(--card-color, #ccc);
+  color: #fff;
+  width: fit-content;
+}
+
+/* ── Descripción ──────────────────────────────────────────────────── */
+.card__description {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: #555;
+  flex: 1;
+}
+
+/* ── Pie de la tarjeta ────────────────────────────────────────────── */
+.card__footer {
+  font-size: 0.8rem;
+  color: #999;
+  border-top: 1px solid #f0f0f0;
+  padding-top: 0.75rem;
+}

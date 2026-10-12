@@ -1,0 +1,93 @@
+/*
+ * global.css
+ * Estilos base de la aplicación.
+ * Se importa una sola vez en main.jsx para que apliquen a toda la app.
+ */
+
+/* ── Reset / base ─────────────────────────────────────────────────── */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f4f6f9;
+  color: #333;
+  min-height: 100vh;
+}
+
+/* ── Layout principal ─────────────────────────────────────────────── */
+.app-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+/* ── Encabezado ───────────────────────────────────────────────────── */
+.app-header {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.app-header h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1a1a2e;
+}
+
+.app-header p {
+  margin-top: 0.5rem;
+  font-size: 1rem;
+  color: #666;
+}
+
+/* ── Filtro ───────────────────────────────────────────────────────── */
+.filter-bar {
+  display: flex;
+  justify-content: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+}
+
+.filter-btn {
+  padding: 0.45rem 1.1rem;
+  border: 2px solid #1a1a2e;
+  border-radius: 999px;
+  background: transparent;
+  font-size: 0.875rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+  color: #1a1a2e;
+}
+
+.filter-btn:hover {
+  background: #1a1a2e;
+  color: #fff;
+}
+
+.filter-btn.active {
+  background: #1a1a2e;
+  color: #fff;
+}
+
+/* ── Grid de tarjetas ─────────────────────────────────────────────── */
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+/* ── Mensaje vacío ────────────────────────────────────────────────── */
+.no-results {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 3rem 0;
+  color: #888;
+  font-size: 1rem;
+}
