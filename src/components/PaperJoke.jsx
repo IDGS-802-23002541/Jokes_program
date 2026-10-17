@@ -1,6 +1,7 @@
 import { Paper, Typography, Box, Chip } from "@mui/material";
 import PropTypes from "prop-types";
 import "../styles/app.css";
+import RickandMorty from "./RickMortyCard";
 
 //Hay dos tipos de chiste. Single viene 
 //Single: viene solo con "joke"
@@ -24,6 +25,8 @@ function PaperJoke({ joke }) {
             {joke.delivery}
           </Typography>
         )}
+
+        <RickandMorty/>
       </>
     </Paper>
   );
