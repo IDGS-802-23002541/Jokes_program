@@ -1,0 +1,26 @@
+Cada chiste que se genera, tendrá la opción de añadirla a los favoritos
+Si se marca el chiste como favorito, se guarda en un arreglo en el localStorage con un objeto por cada chiste
+
+#En caso de single
+{
+    "category": "Programming",
+    "type": "single",
+    "joke": "Sólo hay 10 tipos de personas en este mundo, las que entienden binario y las que no.",
+    "id": 5,
+    ...resto de campos
+}
+
+#En caso de twoparts (tiene setup y delivery)
+
+{
+    "category": "Programming",
+    "type": "twopart",
+    "setup": "¿Qué es el hardware?",
+    "delivery": "El que recibe los golpes cuando falla el software.",
+    "id": 4,
+    ...resto de campos
+}
+
+Si voy a la sección de favoritos, puedo ver los chistes favoritos (/favoritos)
+{yaaaaaaaaaaaaaaaaaaa, tengo muchas pantallas que hacer profe TT TT TT TT}
+{todo por poner rutas}
