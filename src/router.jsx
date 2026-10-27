@@ -3,6 +3,8 @@ import Jokes from "./pages/Jokes";
 import Favoritos from "./pages/Favoritos";
 import { Button, Box } from "@mui/material";
 import "./styles/app.css";
+import Avatar from "./pages/Avatars";
+import Datos from './pages/Datos';
 
 function Layout() {
     return (
@@ -14,6 +16,14 @@ function Layout() {
 
                 <Button className="joke-button" variant="contained" component={Link} to="/favoritos">
                     Mis chistes favoritos
+                </Button>
+
+                <Button className='joke-button' variant='contained' component={Link} to='/datos'>
+                    Datos curiosos 
+                </Button>
+
+                <Button className='joke-button' variant='contained' component={Link} to='/avatars'>
+                    Avatares
                 </Button>
             </Box>
 
@@ -34,6 +44,14 @@ const router = createBrowserRouter([
         {
             path: "/favoritos",
             element: <Favoritos />,
+        },
+        {
+            path: '/datos',
+            element: <Datos />
+        },
+        {
+            path: '/avatars',
+            element: <Avatar />
         }
     ]
   },
